@@ -1,6 +1,6 @@
 use crate::handlers::input::read_line;
 use crate::handlers::operate::{read_delete_dir, read_delete_file};
-use std::io::{ Result, Error};
+use std::io::{Error, Result};
 use std::path::Path;
 use std::process;
 // enum operations {
@@ -35,7 +35,7 @@ pub fn start() -> Result<()> {
                 let path_file_name: Vec<&str> = line_str.split(" ").collect();
                 if path_file_name.len() != 2 {
                     println!("输入数据不正确");
-                   return Ok(());
+                    return Ok(());
                 }
                 let path_name = &path_file_name[0];
                 let file_name = &path_file_name[1];
@@ -53,7 +53,7 @@ pub fn start() -> Result<()> {
                 let path_file_name: Vec<&str> = line_str.split(" ").collect();
                 if path_file_name.len() != 2 {
                     println!("输入数据不正确");
-                   return Ok(());
+                    return Ok(());
                 }
                 let path_name = &path_file_name[0];
                 let file_name = &path_file_name[1];
@@ -67,7 +67,8 @@ pub fn start() -> Result<()> {
             }
             _x0 if line == zero => {
                 println!("退出程序！");
-                process::exit(1);
+                return Ok(());
+                // process::exit(1);
             }
             _ => {
                 println!("请选择正确的操作方式！");
