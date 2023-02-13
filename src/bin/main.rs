@@ -1,5 +1,6 @@
 use folder::run;
+use std::io;
 
-fn main() {
-    run::start();
+fn main() -> io::Result<()> {
+    run::start()
 }
