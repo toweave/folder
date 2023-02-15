@@ -1,8 +1,8 @@
 use crate::handlers::input::read_line;
 use crate::handlers::operate::{read_delete_dir, read_delete_file};
-use std::io::{Error, Result};
+use std::io::{Result};
 use std::path::Path;
-use std::process;
+
 // enum operations {
 //   Some(String::from("0")),
 //   Zero,
